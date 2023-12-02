@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+html{
+	background-color: #f4f4f5;
+}
+body {
+	font-familiy: "Inter", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.card{
+	background-color: white;
+	padding: 8px;
+}
+h4{
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+p{
+	color: #71717a;
+	text-align: left;
+}
+a{
+	color: #71717a;
+	text-align: left;
+}
+svg{
+	height: 140;
+	float:left;
+}
+img{
+	float:left;
+}
