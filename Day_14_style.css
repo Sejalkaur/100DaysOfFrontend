@@ -1,0 +1,147 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #3faf82;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#box {
+	width: 80px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bar {
+	width: 100%;
+	background: #fff;
+	height: 15%;
+	border-radius: 3px;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#box.active #one {
+	animation: one 550ms both;
+}
+
+#box.active #two {
+	animation: two 550ms both;
+}
+
+#box.active #three {
+	animation: three 550ms both;
+}
+
+#box.inactive #one {
+	animation: bw-one 550ms both;
+}
+
+#box.inactive #two {
+	animation: bw-two 550ms both;
+}
+
+#box.inactive #three {
+	animation: bw-three 550ms both;
+}
+
+@keyframes one {
+	50% {
+		transform: translateY(283%);
+	}
+	
+	100% {
+		transform: translateY(283%) rotate(135deg);
+	}
+}
+
+@keyframes two {
+	50% {
+		height: 0;
+		width: 0;
+	}
+	
+	100% {
+		height: 0;
+		width: 0;
+	}
+}
+
+@keyframes three {
+	50% {
+		transform: translateY(-283%);
+	}
+	
+	100% {
+		transform: translateY(-283%) rotate(45deg);
+	}
+}
+
+@keyframes bw-one {
+	0% {
+		transform: translateY(283%) rotate(135deg);
+	}
+	
+	50% {
+		transform: translateY(283%) rotate(0deg);
+	}
+	
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes bw-two {
+	0% {
+		height: 0;
+		width: 0;
+	}
+	
+	50% {
+		height: 0;
+		width: 0;
+	}
+	
+	100% {
+		height: 15%;
+		width: 100%;
+	}
+}
+
+@keyframes bw-three {
+	0% {
+		transform: translateY(-283%) rotate(45deg);
+	}
+	
+	50% {
+		transform: translateY(-283%) rotate(0deg);
+	}
+	
+	100% {
+		transform: translateY(0);
+	}
+}
